@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">H</span><div><strong>HostelHub</strong><small>Management System</small></div></div>
+    <nav><a href="#rooms">Rooms</a><a href="#booking">Book a Room</a><a href="#records">Bookings</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">STUDENT ACCOMMODATION</p>
+        <h1>A better place<br>to <span>stay and study.</span></h1>
+        <p class="intro">Manage hostel rooms and student bookings in one simple place.</p>
+        <a class="primary-link" href="#booking">Book a room <span>→</span></a>
+      </div>
+      <div class="hero-card"><div class="building">⌂</div><p>Comfortable living.<br><strong>Simple management.</strong></p><div class="mini-stats"><div><b>3</b><small>Room types</small></div><div><b>24/7</b><small>Student care</small></div></div></div>
+    </section>
+    <section id="rooms" class="section">
+      <div class="section-heading"><div><p class="eyebrow">ACCOMMODATION</p><h2>Available room types</h2></div><p class="muted">Monthly fee per student</p></div>
+      <div id="room-list" class="room-grid">
+        <article class="room-card"><div class="room-icon">🛏</div><h3>Single Room</h3><p>Private space for one student.</p><div class="price">₹5,000 <small>/ month</small></div></article>
+        <article class="room-card"><div class="room-icon">🛏🛏</div><h3>Double Sharing</h3><p>Comfortable room for two students.</p><div class="price">₹3,500 <small>/ month</small></div></article>
+        <article class="room-card"><div class="room-icon">🏠</div><h3>Triple Sharing</h3><p>Budget-friendly shared room.</p><div class="price">₹2,800 <small>/ month</small></div></article>
+      </div>
+    </section>
+    <section id="booking" class="section booking-section">
+      <div class="booking-copy"><p class="eyebrow">NEW ADMISSION</p><h2>Student room<br>registration</h2><p class="muted">Enter student details to save a booking in the system.</p><div class="notice">ⓘ Demo project: bookings are stored in memory and reset when the server stops.</div></div>
+      <form id="booking-form" class="booking-form">
+        <label>Student full name<input name="name" required placeholder="Enter full name"></label>
+        <label>Phone number<input name="phone" required inputmode="tel" pattern="[0-9+ -]{7,15}" placeholder="Enter phone number"></label>
+        <label>Course / Class<input name="course" required placeholder="e.g. Diploma in Computer"></label>
+        <label>Select room<select name="room" required><option value="">Choose a room</option><option value="101">Room 101 — Single (₹5,000/month)</option><option value="102">Room 102 — Double (₹3,500/month)</option><option value="201">Room 201 — Triple (₹2,800/month)</option></select></label>
+        <button type="submit">Save booking <span>→</span></button>
+        <p id="message" role="status"></p>
+      </form>
+    </section>
+    <section id="records" class="section">
+      <div class="section-heading"><div><p class="eyebrow">RECORDS</p><h2>Recent bookings</h2></div><button id="refresh" class="secondary-button" type="button">Refresh list ↻</button></div>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Student</th><th>Phone</th><th>Course</th><th>Room</th></tr></thead><tbody id="booking-list"><tr><td colspan="5" class="empty">No bookings yet. Add a student above.</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer><strong>HostelHub</strong><span>Java · HTML · CSS · Student Project</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
